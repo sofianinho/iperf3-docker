@@ -1,0 +1,11 @@
+FROM ubuntu:18.04
+
+ADD . /app
+
+ENV PATH="/app:$PATH"
+ENV LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/app"
+
+EXPOSE 5201/tcp 5201/udp 5201/sctp
+
+ENTRYPOINT ["iperf3"]
+
