@@ -1,8 +1,21 @@
 # iperf3-docker
 This is a docker image with iperf3 compiled with sctp support
 
-You can directly pull the image "sofianinho/iperf3:3.6-ubuntu18.04" from my hub, or rebuild yourself, or set up your own version of iperf with the build-arg "VERSION"
-
+You can: 
+- directly pull the image "sofianinho/iperf3:3.6-ubuntu18.04" from docker hub
+```sh
+docker pull sofianinho/iperf3:3.6-ubuntu18.04
+```
+- or rebuild yourself
+```sh
+# You can remove the --build-arg for the proxy if you don't have one (lucky you!)
+docker build --no-cache --build-arg http_proxy=$http_proxy --build-arg https_proxy=$https_proxy -t iperf3:local https://github.com/sofianinho/iperf3-docker.git#master
+```
+- or set up your own version of iperf with the build-arg "VERSION"
+```sh
+# list of available versions here: https://downloads.es.net/pub/iperf/
+docker build --no-cache --build-arg http_proxy=$http_proxy --build-arg https_proxy=$https_proxy --build-arg VERSION=3.5 -t iperf3:3.5 https://github.com/sofianinho/iperf3-docker.git#master
+```
 More info on the iperf3 binary inside:
 
 ```terminal
