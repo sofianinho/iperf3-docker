@@ -119,3 +119,6 @@ docker run -t --rm --name iperf-server -p 5201:5201/tcp -p 5201:5201/udp -p 5201
 ```sh
 docker run -t --rm --link iperf-server sofianinho/iperf3:3.6-ubuntu18.04 -c  iperf-server -p 5201  --nstreams 4 --sctp --time=10
 ```
+
+### Notes on sctp support with docker
+Please read: "docker/2018-08-17-sctp-and-docker-18.06-ce.md" on my repo [TIL](https://github.com/sofianinho/TIL)
