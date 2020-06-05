@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: iperf3-deployment
+  labels:
+    app: iperf3
+  namespace: iperf3-system
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: iperf3
+  template:
+    metadata:
+      labels:
+        app: iperf3
+    spec:
+      containers:
+      - name: iperf3
+        image: sofianinho/iperf3:3.6-ubuntu18.04  
+        command: ["/bin/sh","-c"]
+        args: [ "./bin/entrypoint.sh; sleep infinity"]
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5201
