@@ -17,10 +17,6 @@ spec:
     protocol: UDP
     targetPort: 5201
     nodePort: 31001
-#  - name: sctp1-port
- #   port: 5201
-  #  protocol: SCTP
-   # targetPort: 5201
   selector:
     app: iperf3
 
