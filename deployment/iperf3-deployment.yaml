@@ -1,3 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: iperf3-system
+  labels: 
+    app: iperf3
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
