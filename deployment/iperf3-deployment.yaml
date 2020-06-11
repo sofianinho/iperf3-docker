@@ -29,4 +29,7 @@ spec:
         args: [ "./bin/entrypoint.sh; sleep infinity"]
         imagePullPolicy: Always
         ports:
-        - containerPort: 5201
+        - containerPort: 5201 
+        
+        
+        
