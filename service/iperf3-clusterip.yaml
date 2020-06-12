@@ -8,11 +8,11 @@ spec:
   type: ClusterIP
   clusterIP: None
   ports:
-  - name: tcp1-port
+  - name: tcp-port
     port: 5201
     protocol: TCP
     targetPort: 5201
-  - name: udp1-port
+  - name: udp-port
     port: 5201
     protocol: UDP
     targetPort: 5201
