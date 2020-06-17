@@ -1,7 +1,6 @@
 # MetalLB
 MetalLB is a load-balancer implementation for baremetal [Kubernetes](https://kubernetes.io) clusters, using standard routing protocols.
-This quick guide will set you up a metallb as external load balancer on local kubernetes cluster by following steps and eventually
-getting everything to run smoothly.
+This quick guide will set you up a metallb as external load balancer on local kubernetes cluster by following steps and eventually getting everything to run smoothly.
 
 ## 1 For installation of load balancer(Metallb) to allow nodes to communicate with the external world, apply the manifest:
 ```bash
@@ -16,6 +15,7 @@ Create a config file named `metallb-config.yaml` to give a range of ip address t
 `Source https://metallb.universe.tf/configuration/`  
 
 Finally, apply the load balancer config.
+
 ```bash
 kubectl apply -f metallb-config.yaml
 ```
