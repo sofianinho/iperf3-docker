@@ -3,7 +3,7 @@ MetalLB is a load-balancer implementation for baremetal [Kubernetes](https://kub
 This quick guide will set you up a metallb as external load balancer on local kubernetes cluster by following steps and eventually
 getting everything to run smoothly.
 
-## Option 1 : For installation of load balancer to allow nodes to communicate with the external world, apply the manifest:
+## 1 For installation of load balancer(Metallb) to allow nodes to communicate with the external world, apply the manifest:
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.9.3/manifests/namespace.yaml
 kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.9.3/manifests/metallb.yaml
@@ -20,7 +20,7 @@ Finally, apply the load balancer config.
 kubectl apply -f metallb-config.yaml
 ```
 
-## Option 2 : MetalLB with Helm,  you simply need to run the following command `helm install` ... with:
+## 2 MetalLB with Helm,  you simply need to run the following command `helm install` ... with:
  ```bash
  helm install metallb stable/metallb --namespace kube-system \
   --set configInline.address-pools[0].name=default \
