@@ -4,6 +4,7 @@ metadata:
   labels:
     app: iperf3
   name: my-iperf3
+  namespace: iperf3-server
 spec:
   type: LoadBalancer
   externalTrafficPolicy: Local
